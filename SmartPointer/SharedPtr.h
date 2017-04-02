@@ -36,7 +36,7 @@ public:
 	}
 	//Îö¹¹º¯Êı
 	~SharedPtr(){
-		if(--(*_count)==0){
+		if(_count!=NULL && --(*_count)==0){
 			std::cout<<_ptr<<" Is Destory"<<std::endl;
 			delete _ptr;
 			delete _count;
